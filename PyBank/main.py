@@ -22,34 +22,26 @@ with open(csv_path, 'r') as csv_file:
         dates.append(row[0])
         pl.append(float(row[1]))
 
+
+        #    The total number of months included in the dataset
         date_count = len(list(dates))
+        
+        # the total of the profits and losses
         pl_total = sum(pl)
+
+        # the average of the profits and losses
         pl_avg = pl_total / date_count
+
+        # the greatest increase in profits and losses
         pl_max = max(pl)
+
+        # the greatest decrease in profits and losses
         pl_min = min(pl)
 
+# print check all values
 print(date_count)
 print(pl_total)
 print(pl_avg)
 print(pl_max)
 print(pl_min)
 
-
-#    The total number of months included in the dataset
-#     date_count = len(list(csv_reader))
-#     print(date_count)
-
-# #    The net total amount of "Profit/Losses" over the entire period
-#     for dates in enumerate(csv_reader):
-#         print(dates)
-
-
-
-# The average of the changes in "Profit/Losses" over the entire period
-    # pl_sum = sum('Profit/Losses')
-    # print(pl_sum)
-
-# The greatest increase in profits (date and amount) over the entire period
-
-
-# The greatest decrease in losses (date and amount) over the entire period
