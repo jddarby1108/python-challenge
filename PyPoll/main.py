@@ -9,7 +9,7 @@ voter_ids = []
 counties = []
 candidates = []
 spacer = ("---------------------")
-
+person = []
 
 #Open and read csv
 with open(csv_path, 'r') as csv_file:
@@ -22,16 +22,23 @@ with open(csv_path, 'r') as csv_file:
     for row in csv_reader:
         voter_ids.append(row[0])
         counties.append(row[1])
-        candidates.append(row[1])
+        candidates.append(row[2])
         
         #    The total number of votes cast
         vote_count = len(voter_ids)
+
+    # find candidates
+    person = set(candidates)
+    
+
+        
 
 # print all values to the terminal
 print("Election Results")
 print(spacer)
 print(f"Total Votes: {vote_count}")
 print(spacer)
+
 
 
 

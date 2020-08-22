@@ -49,6 +49,7 @@ print(f"Average Change: $%5d " % (int(pl_avg)))
 print(f"Greatest Increase in Profits: $%5d" % (int(pl_max)))
 print(f"Greatest Decrease in Profits: $%5d" % (int(pl_min)))
 
+
 #export results to a text file
 output_path = os.path.join("new.csv")
 
@@ -65,3 +66,7 @@ with open(output_path, 'w') as csvfile:
     csvwriter.writerow([f"Greatest Increase in Profits: $%5d" % (int(pl_max))])
     csvwriter.writerow([f"Greatest Decrease in Profits: $%5d" % (int(pl_min))])
 
+
+# # Creates a tuple, a sequence of immutable Python objects that cannot be changed
+# myTuple = ('Python', 100, 'VBA', False)
+# print(myTuple)
