@@ -17,7 +17,7 @@ with open(csv_path, 'r') as csv_file:
     #Read the header row
     csv_header = next(csv_file)
     
-
+    # append create lists and start formulas
     for row in csv_reader:
         dates.append(row[0])
         pl.append(float(row[1]))
@@ -25,10 +25,14 @@ with open(csv_path, 'r') as csv_file:
         date_count = len(list(dates))
         pl_total = sum(pl)
         pl_avg = pl_total / date_count
+        pl_max = max(pl)
+        pl_min = min(pl)
 
 print(date_count)
 print(pl_total)
 print(pl_avg)
+print(pl_max)
+print(pl_min)
 
 
 #    The total number of months included in the dataset
