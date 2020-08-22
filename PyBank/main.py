@@ -38,10 +38,13 @@ with open(csv_path, 'r') as csv_file:
         # the greatest decrease in profits and losses
         pl_min = min(pl)
 
-# print check all values
-print(date_count)
-print(pl_total)
+# print all values to the terminal
+print("Financial Analysis")
+print("----------------------------")
+print(f"Total Months:  {date_count}")
+print(f"Total: $%5d" % (int(pl_total)))
 print(pl_avg)
 print(pl_max)
 print(pl_min)
 
+#export results to a text file
