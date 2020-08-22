@@ -38,13 +38,31 @@ with open(csv_path, 'r') as csv_file:
         # the greatest decrease in profits and losses
         pl_min = min(pl)
 
+               
+
+        
+        
 # print all values to the terminal
 print("Financial Analysis")
 print("----------------------------")
 print(f"Total Months:  {date_count}")
 print(f"Total: $%5d" % (int(pl_total)))
-print(pl_avg)
-print(pl_max)
-print(pl_min)
+print(f"Average Change: $%5d, " % (int(pl_avg)))
+print(f"Greatest Increase in Profits: $%5d" % (int(pl_max)))
+print(f"Greatest Decrease in Profits: $%5d" % (int(pl_min)))
 
 #export results to a text file
+output_path = os.path.join("new.csv")
+
+with open(output_path, 'w') as csvfile:
+
+    # Initialize csv.writer
+    csvwriter = csv.writer(csvfile, delimiter=',')
+
+    csvwriter.writerow(["Financial Analysis"])
+    csvwriter.writerow(["----------------------------"])
+    csvwriter.writerow([f"Total Months:  {date_count}"])
+    csvwriter.writerow([f"Total: $%5d" % (int(pl_total))])
+    csvwriter.writerow([f"Average Change: $%5d, " % (int(pl_avg))])
+
+
