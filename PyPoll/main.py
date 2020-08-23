@@ -10,6 +10,7 @@ counties = []
 candidates = []
 spacer = ("---------------------")
 person = []
+candidate_name = []
 
 #Open and read csv
 with open(csv_path, 'r') as csv_file:
@@ -29,6 +30,10 @@ with open(csv_path, 'r') as csv_file:
 
     # find candidates
     person = set(candidates)
+
+    # def results:
+    #     votes = len(voter_ids)
+
     
 
         
@@ -38,6 +43,7 @@ print("Election Results")
 print(spacer)
 print(f"Total Votes: {vote_count}")
 print(spacer)
+print(person)
 
 
 
