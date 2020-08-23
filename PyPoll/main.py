@@ -9,9 +9,16 @@ voter_ids = []
 counties = []
 candidates = []
 spacer = ("---------------------")
-person = []
-candidate_list = []
-votes = []
+vote_count = []
+k_votes = []
+c_votes = []
+l_votes = []
+o_votes = []
+k_calc = []
+c_calc = []
+l_calc = []
+o_calc = []
+
 
 #Open and read csv
 with open(csv_path, 'r') as csv_file:
@@ -25,43 +32,29 @@ with open(csv_path, 'r') as csv_file:
         voter_ids.append(row[0])
         counties.append(row[1])
         candidates.append(row[2])
-        
+                
         #    The total number of votes cast
         vote_count = len(voter_ids)
 
+        # tried really hard to iterate thru names and define function here...couldn't get it
+        k_votes = candidates.count("Khan")
+        c_votes = candidates.count("Correy")
+        l_votes = candidates.count("Li")
+        o_votes = candidates.count("O'Tooley")
 
-    # find candidates
-    person = set(candidates)
-    y = len(person)
+        k_calc = (k_votes / vote_count) * 100
+        c_calc = (c_votes / vote_count) * 100
+        l_calc = (l_votes / vote_count) * 100
+        o_calc = (o_votes / vote_count) * 100        
 
-    
-    for index, y in enumerate(person):
-
-
-    # # loop through candidates for calculation
-        if person == candidates:
-            candidate_list.append(person[index], len(voter_ids))
-               
-
-         
-            
-    
-
-    # def results:
-    #     votes = len(voter_ids)
-
-    
-
+       
         
-
 # print all values to the terminal
 print("Election Results")
 print(spacer)
 print(f"Total Votes: {vote_count}")
 print(spacer)
-print(candidate_list)
-
-
+print(f"Khan:( %5d )" % ((int(k_votes))))
 
 
 
