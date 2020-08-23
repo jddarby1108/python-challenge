@@ -11,13 +11,13 @@ candidates = []
 spacer = ("---------------------")
 vote_count = []
 k_votes = []
-c_votes = []
-l_votes = []
-o_votes = []
-k_calc = []
-c_calc = []
-l_calc = []
-o_calc = []
+# c_votes = []
+# l_votes = []
+# o_votes = []
+# k_calc = []
+# c_calc = []
+# l_calc = []
+# o_calc = []
 
 
 #Open and read csv
@@ -38,14 +38,14 @@ with open(csv_path, 'r') as csv_file:
 
         # tried really hard to iterate thru names and define function here...couldn't get it
         k_votes = candidates.count("Khan")
-        c_votes = candidates.count("Correy")
-        l_votes = candidates.count("Li")
-        o_votes = candidates.count("O'Tooley")
+        # c_votes = candidates.count("Correy")
+        # l_votes = candidates.count("Li")
+        # o_votes = candidates.count("O'Tooley")
 
-        k_calc = (k_votes / vote_count) * 100
-        c_calc = (c_votes / vote_count) * 100
-        l_calc = (l_votes / vote_count) * 100
-        o_calc = (o_votes / vote_count) * 100        
+        # k_calc = (k_votes / vote_count) * 100
+        # c_calc = (c_votes / vote_count) * 100
+        # l_calc = (l_votes / vote_count) * 100
+        # o_calc = (o_votes / vote_count) * 100        
 
        
         
@@ -54,7 +54,7 @@ print("Election Results")
 print(spacer)
 print(f"Total Votes: {vote_count}")
 print(spacer)
-print(f"Khan:( %5d )" % ((int(k_votes))))
+# print(f"Khan:( %5d )" % (int(k_votes)))
 
 
 
@@ -71,5 +71,3 @@ with open(output_path, 'w') as csvfile:
     csvwriter.writerow([spacer])
     csvwriter.writerow([f"Total Votes: %5d " % (int(vote_count))])
     csvwriter.writerow([spacer])
-
-    
